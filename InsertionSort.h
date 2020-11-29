@@ -14,7 +14,7 @@
 
 template <typename RandomAccessIterator>
 void myInsertionSort(RandomAccessIterator beginIter, RandomAccessIterator endIter) {
-    if(beginIter == endIter || beginIter + 1 == endIter && *beginIter < *endIter) {
+    if(beginIter == endIter || beginIter + 1 == endIter && beginIter < endIter) {
         return;
     }
     int length = endIter - beginIter;
