@@ -80,16 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/InsertionSort.h">
-			<Option target="MySortingTests"/>
-		</Unit>
 		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/MyBubbleSort.h">
 			<Option target="MySortingTests"/>
 		</Unit>
-		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/MySortingTests.cpp">
+		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/MyInsertionSort.h">
 			<Option target="MySortingTests"/>
 		</Unit>
-		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/main.cpp">
+		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/MySortingTests.cpp">
 			<Option target="MySortingTests"/>
 		</Unit>
 		<Unit filename="C:/Users/15136/CLionProjects/MySortingTests/CMakeLists.txt">

@@ -6,25 +6,30 @@
  **************************************************************************************
  **************************************************************************************/
 
-#ifndef MYSORTINGTESTS_INSERTIONSORT_H
-#define MYSORTINGTESTS_INSERTIONSORT_H
+#ifndef MYSORTINGTESTS_MYINSERTIONSORT_H
+#define MYSORTINGTESTS_MYINSERTIONSORT_H
 
 #include <iterator>
 
+using namespace std;
 
 template <typename RandomAccessIterator>
 void myInsertionSort(RandomAccessIterator beginIter, RandomAccessIterator endIter) {
-    if(beginIter == endIter || beginIter + 1 == endIter && beginIter < endIter) {
+    if(beginIter == endIter || beginIter + 1 == endIter) {
         return;
     }
-    int length = endIter - beginIter;
-    for(RandomAccessIterator current = beginIter + 1; current < length; current++){
-        bool needNextPass = false;
-        for(RandomAccessIterator endOfPass = endIter - 1; current >= 0 && )
+
+    for(RandomAccessIterator iItr = beginIter + 1; iItr < endIter; iItr++){
+        typename iterator_traits<RandomAccessIterator>::value_type currentElement = *iItr;
+        RandomAccessIterator kItr;
+        for(kItr = iItr - 1; kItr >= beginIter && *kItr > currentElement; kItr--){
+            *(kItr + 1) = *kItr;
+        }
+        *(kItr + 1) = currentElement;
     }
 }
 
-#endif //MYSORTINGTESTS_INSERTIONSORT_H
+#endif //MYSORTINGTESTS_MYINSERTIONSORT_H
 
 /*
  public class InsertionSort {
