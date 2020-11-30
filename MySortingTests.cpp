@@ -42,7 +42,7 @@ int main() {
         vec1.push_back(value);
         vec2.push_back(value);
         vec3.push_back(value);
-        arr1[i] = arr2[i] = value;
+        arr1[i] = arr2[i] = arr3[i] = value;
     }
 
     for (unsigned int i = 0; i < 3; i++) {
@@ -117,10 +117,10 @@ int main() {
             cout << "Swapping last two elements of each sorted collection ..." << endl;
             swap(vec1[NUM_VALUES - 2], vec1[NUM_VALUES - 1]);
             swap(vec2[NUM_VALUES - 2], vec2[NUM_VALUES - 1]);
-            swap(vec3[NUM_VALUES - 2], vec3[NUM_VALUES - 1]);
+            swap(vec3[NUM_VALUES - 2], vec3[NUM_VALUES - 1]);   // THESE WERE COMMENTED OUT
             swap(arr1[NUM_VALUES - 2], arr1[NUM_VALUES - 1]);
             swap(arr2[NUM_VALUES - 2], arr2[NUM_VALUES - 1]);
-            swap(arr3[NUM_VALUES - 2], arr3[NUM_VALUES - 1]);
+            swap(arr3[NUM_VALUES - 2], arr3[NUM_VALUES - 1]);    // THESE WERE COMMENTED OUT
         }
         else if (i == 1) { // Just now sorted sequences where at most the last two elements were out of order
             if (insertionSortArrayDuration > (bubbleSortArrayDuration + .01) * 2) {
@@ -135,10 +135,10 @@ int main() {
             cout << "Swapping first and last elements of each sorted collection ..." << endl;
             swap(vec1.front(), vec1.back());
             swap(vec2.front(), vec2.back());
-            swap(vec3.front(), vec3.back());
+            swap(vec3.front(), vec3.back());   // THESE WERE COMMENTED OUT
             swap(arr1[0], arr1[NUM_VALUES - 1]);
             swap(arr2[0], arr2[NUM_VALUES - 1]);
-            swap(arr3[0], arr3[NUM_VALUES - 1]);
+            swap(arr3[0], arr3[NUM_VALUES - 1]);    // THESE WERE COMMENTED OUT
         }
         else if (i == 2) {  // Just now sorted sequences where only the first and last elements were out of order:  bad for Bubble sort, good for Insertion sort.
             if (insertionSortArrayDuration > bubbleSortArrayDuration / 10.0) {
@@ -156,6 +156,6 @@ int main() {
 
     delete[] arr1;
     delete[] arr2;
-    delete[] arr3;
+    delete[] arr3;    // THESE WERE COMMENTED OUT
     return 0;
 }
